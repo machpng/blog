@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,7 +108,7 @@
                 <input type="checkbox" value="remember-me"> {{ __('auth.Remember Me') }}
             </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">提交</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('auth.Login') }}</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
     </form>
 </body>
