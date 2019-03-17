@@ -18,8 +18,9 @@
         <div class="body clearfix">
             <ul class="tags">
                 @foreach($tag_list as $key => $tag)
-                    <li><a href="javascript:void(0);" data-name="{{ $tag }}">{{ $tag }}</a></li>
+                    <li><a href="javascript:void(0);" data-name="{{ $tag }}" class="{{ str_contains($tags, $tag) ? 'selected' : '' }}">{{ $tag }}</a></li>
                 @endforeach
+                {{ str_is('a', 'aaaa') }}
             </ul>
         </div>
     </div>

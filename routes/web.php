@@ -16,7 +16,7 @@ Auth::routes();
 
 Route::get('single', 'HomeController@single');
 Route::get('about', 'HomeController@about');
-Route::get('/{tags?}', 'HomeController@index')->name('index');
+Route::get('/', 'HomeController@index')->name('index');
 
 Route::get('topic', 'TopicsController@create')->name('topics.store');
 Route::post('topic/store', 'TopicsController@store');

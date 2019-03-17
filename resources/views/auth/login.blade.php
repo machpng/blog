@@ -88,7 +88,7 @@
         {{ csrf_field() }}
         <h3 class="mb-3 font-weight-normal">{{ __('auth.Login') }}</h3>
         <div class="{{ $errors->has('email') ? ' has-error' : '' }}">
-            <input type="email" name='email' class="form-control" placeholder="{{ __('auth.Email') }}" value="{{ old('name') }}" required autofocus>
+            <input type="email" name='email' class="form-control" placeholder="{{ __('auth.Email') }}" value="{{ old('email') }}" required autofocus>
             @if ($errors->has('email'))
                 <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>

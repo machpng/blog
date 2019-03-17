@@ -42,8 +42,8 @@
                 <a href="/">Blog</a>
             </div>
             <div class="clean-searchbox">
-                <form action="#" method="get" accept-charset="utf-8">
-                    <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                <form action="{{ route('index') }}" method="get" accept-charset="utf-8">
+                    <input class="searchfield" id="searchbox" type="text" placeholder="Search" name="key">
                     <button class="searchbutton" type="submit">
                         <i class="fa fa-search"></i>
                     </button>

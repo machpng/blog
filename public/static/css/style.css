@@ -645,6 +645,7 @@ Blog styles
 .aside-widget {
     margin-bottom: 40px;
     border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .aside-widget header {
@@ -680,17 +681,22 @@ The tags widget
 .tags li {
     float: left;
 }
+.tags .selected {
+    background: #ccc;
+}
 
 .tags li a {
     padding: 3px 15px;
     display: inline-block;
     margin: 5px;
     border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
 }
 
 .tags li a:focus,
 .tags li a:hover {
-    border-color: #222;
+    /*border-color: #222;*/
+    background-color: #ccc;
 }
 
 /* ============

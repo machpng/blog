@@ -22,6 +22,11 @@ class HomeController extends Controller
             });
         }
 
+        // 搜索
+        if ($request->get('key')) {
+            $topic->where('title', 'like', '%' . $request->get('key') . '%');
+        }
+
         $list = $topic->paginate(3);
         // 标签
         $tag_list = $tag->getTags();
