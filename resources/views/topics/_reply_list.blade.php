@@ -3,7 +3,7 @@
         <div class=" media"  name="reply{{ $reply->id }}" id="reply{{ $reply->id }}">
             <div class="avatar pull-left">
                 <a href="">
-                    <img class="media-object img-thumbnail" alt="{{ $reply->user->name }}" src="{{ $reply->user->avatar }}"  style="width:48px;height:48px;"/>
+                    <img class="media-object img-thumbnail" alt="{{ $reply->user->name }}" src="{{ asset('img/avatar.jpg') }}"  style="width:48px;height:48px;"/>
                 </a>
             </div>
 

@@ -23,14 +23,15 @@ class HomeController extends Controller
         }
 
         // 搜索
-        if ($request->get('key')) {
-            $topic->where('title', 'like', '%' . $request->get('key') . '%');
+        $keyword = $request->get('key', '');
+        if ($keyword) {
+            $topic->where('title', 'like', '%' . $keyword . '%');
         }
 
         $list = $topic->paginate(3);
         // 标签
         $tag_list = $tag->getTags();
-        return view('index', compact('list', 'tags', 'hot', 'tag_list'));
+        return view('index', compact('list', 'tags', 'hot', 'tag_list', 'keyword'));
     }
 
     public function single()

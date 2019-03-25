@@ -5,8 +5,8 @@
         </header>
         <div class="body">
             <ul class="clean-list">
-                @foreach($hot as $k => $v)
-                    <li><a href="{{ $topic->link() }}">{{ $v->title }}</a></li>
+                @foreach($hot as $k => $topic)
+                    <li><a href="{{ $topic->link() }}">{{ $topic->title }}</a></li>
                 @endforeach
             </ul>
         </div>
