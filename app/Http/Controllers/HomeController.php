@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use App\Models\Topic;
-use function foo\func;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

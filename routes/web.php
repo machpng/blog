@@ -26,4 +26,13 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 
 Route::get('single', 'HomeController@single');
 Route::get('about', 'HomeController@about')->name('about');
+
+// 后台
+Route::prefix('admin')->namespace('Admin')->group(function () {
+    Route::get('login', 'LoginController@showLoginForm')->name('admin.login');
+    Route::post('login', 'LoginController@login')->name('admin.login');
+    Route::resource('member', 'UserController');
+    Route::get('/', 'HomeController@index');
+});
+
 Route::get('/{tags?}', 'HomeController@index')->name('index');
